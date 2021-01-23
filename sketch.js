@@ -39,7 +39,7 @@ function setup(){
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collided)
   trex.scale=0.5;
-  trex.debug=true
+  trex.debug=false
   trex.setCollider("rectangle", 0, 0, 200, 80)
   
   ground = createSprite(300, 180, 600, 20)
@@ -64,7 +64,7 @@ function setup(){
 }
 
 function draw(){
-  background(200)
+  background("purple")
   
   if (gameState === PLAY){
       
@@ -80,7 +80,7 @@ function draw(){
      ground.x=ground.width/2
     }
     
-    spawnCloud()
+  
   
     Obstacle()
     
@@ -139,7 +139,7 @@ function draw(){
   //console.log(frameCount)
 }
 
-function spawnCloud(){
+/*function spawnCloud(){
   if(frameCount%50===0){
     var cloud=createSprite(600, 100, 20, 20) 
     cloud.addImage(cloud_img)
@@ -151,7 +151,7 @@ function spawnCloud(){
     cloud.lifetime=160
     cloudGroup.add(cloud)
   }
-}
+}*/
 
 function Obstacle(){
   if(frameCount%50===0){
